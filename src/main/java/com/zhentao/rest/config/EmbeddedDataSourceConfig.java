@@ -16,6 +16,7 @@ public class EmbeddedDataSourceConfig implements DataSourceConfig {
     public EmbeddedDatabase dataSource() {
         return new EmbeddedDatabaseBuilder()
         .setType(EmbeddedDatabaseType.H2)
+        .addScript("set_mode.sql")
         .addScript("schema.sql")
         .addScript("init.sql")
         .build();
