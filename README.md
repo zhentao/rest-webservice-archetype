@@ -26,6 +26,10 @@ To run with integration tests with an embedded tomcat and embedded H2 database:
 
     mvn clean verify
 
+To run with integration tests only (skip unit tests):
+
+	mvn clean verify -DskipUnitTests -Dcobertura.skip
+
 NOTE: The integration test suite inside the application does not replace
 the large regression suite to be built by QA.
 

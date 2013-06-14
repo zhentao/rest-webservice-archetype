@@ -27,6 +27,7 @@
     <jersey.version>1.17</jersey.version>
     <tomcat.version>7.0.39</tomcat.version>
     <properties.file>${project.basedir}/src/main/conf/runtime.properties</properties.file>
+    <skipUnitTests>false</skipUnitTests>
   </properties>
 
   <dependencies>
@@ -301,6 +302,7 @@
         <version>2.14.1</version>
         <configuration>
           <argLine>-XX:-UseSplitVerifier</argLine>
+         <skipTests>${skipUnitTests}</skipTests>
         </configuration>
         <executions>
           <execution>
